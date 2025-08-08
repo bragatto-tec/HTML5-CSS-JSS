@@ -1,0 +1,114 @@
+/*Margem*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* altura */
+body {
+    background-color: #E2E3DC;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* logo */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.05); /*contraste, para diferenciar divs */
+}
+
+/*tamanho da logo */
+header img {
+    max-width: 320px;
+    height: auto;
+}
+
+/* Layout principal*/
+.container {
+    flex: 2; /*conteúdo expandir para ocupar o espaço */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+    padding: 50px;
+    gap: 120px;
+}
+
+/* Texto do lado esquerdo */
+.text-content {
+    flex: 1;
+    max-width: 70%;
+    text-align: left;
+}
+.text-content p {
+    font-size: 1.5em; 
+    line-height: 1.8; 
+}
+
+
+/* Título*/
+.text-content h1 {
+    font-size: 4.2em;
+    margin-bottom: 20px;
+}
+
+/*botão */
+.button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #333;
+}
+
+/* Imagem do lado direito */
+.image-container {
+    flex: 1;
+    max-width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Footer*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    width: 100%;
+}
+
+/*link do footer */
+footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

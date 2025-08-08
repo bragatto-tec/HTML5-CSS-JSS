@@ -1,0 +1,85 @@
+/*Margem*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* logo */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.05); /*contraste, para diferenciar divs */
+}
+/*tamanho da logo */
+header img {
+    max-width: 320px;
+    height: auto;
+}
+body {
+    background-color: #E2E3DC;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    flex: 2; /*conteúdo expandir para ocupar o espaço */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px;
+    gap: 110px;
+}
+
+/* Texto do lado esquerdo */
+.text-content {
+    flex: 1;
+    max-width: 70%;
+    text-align: left;
+}
+.text-content p {
+    font-size: 1.3em; 
+    line-height: 1.8; 
+}
+
+/*formulario a direita*/
+.formulario-container {
+    flex: 1;
+    max-width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+/* Título*/
+.text-content h1 {
+    font-size: 3.4em;
+    margin-bottom: 20px;
+}
+
+
+/* Footer*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    width: 100%;
+}
+/*link do footer */
+footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

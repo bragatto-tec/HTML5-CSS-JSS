@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+    <meta name="author" content="Guilherme Miyamoto Bragatto e Felipe de Souza Cassemiro" />
+    <title> Formulário</title>
+    <link rel="stylesheet" href="estilo_formulario.css">
+</head>
+<body>
+    <header>
+        <img src="../img/Adobe Express - file (1).png" alt="logo">
+    </header>
+    <div class="container">
+        <div class="text-content">  
+            <h1>Informações</h1>
+            <p class="txt_mont"> Somos um grupo iniciante de estudantes e neste Formulário, iremos pedir algumas informações suas para cadastro, e se quiser nos ajudar para fornecermos uma melhor experiência, por favor deixar sugestões, gratos.</p>
+        </div>
+        <div class="formulario.container">
+            <form name="meuFormulario" onsubmit="return validarFormulario()">
+                <p> <strong> Nome : </strong><input type="text" name="nome"></p>
+                <br>
+                <p> <strong> E-mail :</strong> <input type="text" name="email"></p>
+                <br>
+
+                <p><strong>Sexo: </strong> 
+                    <input type="radio" name="sex" value="masc"> Masculino
+                    <input type="radio" name="sex" value="Fem"> Feminino
+                </p>
+                <br>
+
+                <h4>Objetivos:</h4>
+                <br>
+                <input type="checkbox" name="muscular" value="muscular"> Ganho de massa muscular <br>
+                <input type="checkbox" name="Emagrecimento" value="Emagrecimento"> Emagrecimento <br>
+                <input type="checkbox" name="energia" value="energia"> Energia<br>
+                <input type="checkbox" name="vitaminas" value="vitaminas"> Vitaminas<br>
+                <br>
+
+                <h4> Deixe sugestôes ou dúvidas </h4>
+                <br>    
+                <textarea name="mensagem" rows="10" cols="30" placeholder="Escreva aqui..."></textarea>
+                <br>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Cancelar">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p class="txt_mont">Desenvolvido por: Guilherme Miyamoto Bragatto e Felipe de Souza Caseemiro</p>
+        <a href="home.html">Home</a>
+    </footer>
+
+    <!-- SCRIPT VALIDAÇÃO -->
+    <script>
+        function validarFormulario() {
+            var nome = document.forms["meuFormulario"]["nome"].value;
+            var email = document.forms["meuFormulario"]["email"].value;
+            var sexoM = document.forms["meuFormulario"]["sex"][0].checked;
+            var sexoF = document.forms["meuFormulario"]["sex"][1].checked;
+            var objetivo1 = document.forms["meuFormulario"]["muscular"].checked;
+            var objetivo2 = document.forms["meuFormulario"]["Emagrecimento"].checked;
+            var objetivo3 = document.forms["meuFormulario"]["energia"].checked;
+            var objetivo4 = document.forms["meuFormulario"]["vitaminas"].checked;
+            var mensagem = document.forms["meuFormulario"]["mensagem"].value;
+
+            if (nome == "") {
+                alert("Por favor, preencha o nome.");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Por favor, preencha o e-mail.");
+                return false;
+            }
+
+            if (sexoM == false && sexoF == false) {
+                alert("Por favor, selecione o sexo.");
+                return false;
+            }
+
+            if (objetivo1 == false && objetivo2 == false && objetivo3 == false && objetivo4 == false) {
+                alert("Por favor, selecione pelo menos um objetivo.");
+                return false;
+            }
+
+            if (mensagem == "") {
+                alert("Por favor, escreva uma mensagem.");
+                return false;
+            }
+
+            alert("Formulário enviado com sucesso!");
+            return true;
+        }
+    </script>
+</body>
+</html>
